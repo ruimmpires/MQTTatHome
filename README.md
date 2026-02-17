@@ -32,7 +32,7 @@ The system is divided into four logical layers: Sensing (Edge), Communication (B
 
 > **Note:** The architecture relies on an ESP8266 to collect shower water temperature and ambient weather data, which is broadcasted to a central Mosquitto broker on a Raspberry Pi.
 
-flowchart TD
+<pre><code>```mermaidflowchart TD
     subgraph Edge ["1. Edge Layer (Sensing & Actuation)"]
         direction TB
         Sensor["ESP8266 Sensor Node<br/>(DS18B20 + DHT11)"]
@@ -80,6 +80,7 @@ flowchart TD
     
     class Mosquitto broker;
     class Splunk,LocalDB db;
+```
 
 ---
 
