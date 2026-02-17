@@ -32,7 +32,11 @@ The system is divided into four logical layers: Sensing (Edge), Communication (B
 
 > **Note:** The architecture relies on an ESP8266 to collect shower water temperature and ambient weather data, which is broadcasted to a central Mosquitto broker on a Raspberry Pi.
 
-<pre><code>```mermaid
+<p align="center">
+  <img src="MQTTatHomearch.png" alt="MQTTatHome architecture" width="200"/>
+</p>
+
+```mermaid
   flowchart TD
     subgraph Edge ["1. Edge Layer (Sensing & Actuation)"]
         direction TB
