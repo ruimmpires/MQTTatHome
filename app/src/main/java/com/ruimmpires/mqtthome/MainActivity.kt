@@ -79,6 +79,10 @@ class MainActivity : AppCompatActivity() {
             showSettingsDialog()
         }
 
+        btnAbout.setOnClickListener {
+            showAboutDialog()
+        }
+
         if (brokerIp.isNotEmpty()) {
             connectToMqtt()
         } else {
@@ -90,7 +94,7 @@ class MainActivity : AppCompatActivity() {
     private fun showAboutDialog() {
         AlertDialog.Builder(this)
             .setTitle("About MQTTatHome")
-            .setMessage("A custom IoT visualization tool.\n\nDeveloped by: Rui Pires and Gemini Pro\nGitHub: github.com/ruimmpires/mqttathome\n22Feb2026\nVersion 1.0")
+            .setMessage("A custom IoT visualization tool.\n\nDeveloped by: Rui Pires and Gemini Pro\nGitHub: github.com/ruimmpires/MQTTatHome\n22Feb2026\nVersion 1.1")
             .setPositiveButton("OK", null)
             .setIcon(R.mipmap.ic_launcher) // This adds your new app icon to the dialog!
             .show()
