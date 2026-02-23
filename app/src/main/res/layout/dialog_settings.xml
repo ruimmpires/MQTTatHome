@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <TextView android:text="MQTT Broker IP" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    <EditText android:id="@+id/etBrokerIp" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="192.168.1.100" android:inputType="textUri"/>
+
+    <TextView android:text="Port" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp"/>
+    <EditText android:id="@+id/etBrokerPort" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="1883" android:inputType="number"/>
+
+    <TextView android:text="Sensor 1 Name (e.g., Water)" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:textStyle="bold"/>
+    <EditText android:id="@+id/etName1" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Water Temp"/>
+
+    <TextView android:text="Sensor 1 Topic" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    <EditText android:id="@+id/etTopic1" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="home/tank/temp1"/>
+
+    <TextView android:text="Sensor 2 Name (e.g., Solar)" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:textStyle="bold"/>
+    <EditText android:id="@+id/etName2" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Air Temp"/>
+
+    <TextView android:text="Sensor 2 Topic" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    <EditText android:id="@+id/etTopic2" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="home/tank/temp2"/>
+
+</LinearLayout>
