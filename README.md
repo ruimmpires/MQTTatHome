@@ -115,11 +115,29 @@ The **MQTTatHome Custom App** is being developed to solve the "transient data" p
 
 ---
 
-## 🗺️ Future Roadmap
-- [ ] **Phase 1:** Core Android App UI and MQTT connection.
-- [ ] **Phase 2:** Local data persistence (Room Database) for historical graphing.
-- [ ] **Phase 3:** Push notifications for specific temperature thresholds.
-- [ ] **Phase 4 (Security Hardening):** Migrate from standard MQTT (Port 1883) to MQTTS (TLS/SSL on Port 8883) with strict User/Password authentication and ACLs. *(Note: May require upgrading Edge nodes to ESP32 for cryptographic performance).*
+## ✨ Current Features (Phase 1 Complete)
+The core foundation of **MQTTatHome** is now live and functional. The app currently supports:
+* **Real-Time Telemetry:** Connects directly to a local Mosquitto broker to stream live data.
+* **Dynamic Dual-Graphing:** Plots two separate sensor topics simultaneously on a rolling time-series graph using MPAndroidChart.
+* **Customizable Settings:** A built-in UI allows users to define their own Broker IP, Port, MQTT Topics, and custom display names for the sensors (e.g., "Water Temp" vs. "Air Temp") directly on the device.
+* **Persistent Configuration:** Settings are saved locally via Android `SharedPreferences`, automatically reconnecting upon app launch.
 
+---
+
+## 📲 Installation & Usage
+Since this is a specialized IoT tool, it is not distributed via the Google Play Store. You can install it directly from this repository:
+
+1. Navigate to the **[Releases](../../releases)** section on the right side of this GitHub page.
+2. Download the latest `app-release.apk` file to your Android device.
+3. Open the file to install (you may need to allow "Install from Unknown Sources" in your Android settings).
+4. Launch the app, tap the **Settings** button, and enter your Raspberry Pi's IP address and MQTT topics.
+
+---
+
+## 🗺️ Future Roadmap
+- [x] **Phase 1:** Core Android App UI, real-time dual graphing, and configurable MQTT connection.
+- [ ] **Phase 2:** Local data persistence (Room Database) to cache historical data when the app is minimized.
+- [ ] **Phase 3:** Push notifications for specific temperature thresholds.
+- [ ] **Phase 4 (Security Hardening):** Migrate from standard MQTT (Port 1883) to MQTTS (TLS/SSL on Port 8883) with strict authentication.
 ---
 *Developed by [@ruimmpires](https://github.com/ruimmpires)*
